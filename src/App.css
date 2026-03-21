@@ -1,0 +1,178 @@
+/* main */
+.main {
+  display: grid;
+  place-content: center;
+  max-width: 40rem;
+  /* border: 1px solid red; */
+  margin: auto;
+  height: 100vh;
+}
+
+/* Form section styles */
+.form-section {
+  background-color: #fff;
+  width: 40rem;
+  height: calc(100vh - 8rem);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid black;
+  gap: 1rem;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5.5rem 0 2rem;
+}
+.quickSelectWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+}
+.quickSelectButton {
+  background-color: rgb(0 0 0);
+  border: none;
+  padding: 0.5rem 1.5rem;
+  color: white;
+  border-radius: 0.5rem;
+  min-width: 6rem;
+  cursor: pointer;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 1rem;
+  width: 100%;
+  gap: 1.2rem;
+
+  /* border: 1px solid red; */
+}
+/* Select input */
+.selectWrapper,
+.buttonWrapper {
+  width: 100%;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 0.2rem;
+}
+.buttonWrapper {
+  margin: 1.2rem 0;
+}
+.label {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0, 0.6);
+}
+/* file upload */
+.fileUpload {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.2rem;
+}
+.fileInput {
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 0.1rem solid #ccc;
+  padding: 1rem 2rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.fileName {
+  font-size: 1.2rem;
+}
+/* submit */
+.fullWidthBtn {
+  width: 100%;
+  border: none;
+  background: rgba(0, 0, 0);
+  color: white;
+  font-weight: 500;
+  font-size: 1.8rem;
+  padding: 1rem 0rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+/* Select Container */
+.select-container {
+  position: relative;
+  width: 100%;
+}
+
+/* Select Trigger Button */
+.select-trigger {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #fff;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 1rem;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+}
+
+/* Select Dropdown Content */
+.select-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  z-index: 100;
+  max-height: 200px;
+  overflow-y: auto;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/* Select Dropdown Item */
+.select-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Select Dropdown Item Highlighted */
+.select-item-highlighted {
+  background: #eee;
+}
+
+/* Select Dropdown Item Default */
+.select-item-default {
+  background: #fff;
+}
+
+/* Hidden File Input */
+.file-upload-input {
+  display: none;
+}
+.errorText {
+  color: red;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.footer {
+  margin: auto;
+  font-size: 1.2rem;
+  font-weight: 400;
+}

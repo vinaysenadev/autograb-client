@@ -1,0 +1,57 @@
+VEHICLE SERVICE LOGBOOK
+
+---
+
+## Vehicle Details
+
+Make: Tesla
+Model: Model 3
+Badge: Performance
+Registration Number: TS09AB1234
+VIN: 5YJ3E1EA7KF317XXX
+Owner Name: John Doe
+
+---
+
+## Service History
+
+Date: 2024-01-15
+Odometer: 12,500 km
+Service Type: General Inspection
+Details:
+
+* Checked battery health
+* Inspected brakes and tires
+* Software update completed
+  Technician: Service Center Hyderabad
+
+---
+
+Date: 2024-06-10
+Odometer: 18,200 km
+Service Type: Tire Rotation
+Details:
+
+* Rotated all four tires
+* Checked alignment
+  Technician: Tesla Service Hub
+
+---
+
+Date: 2025-01-05
+Odometer: 25,800 km
+Service Type: Annual Maintenance
+Details:
+
+* Brake fluid check
+* Cabin air filter replacement
+* Full diagnostics run
+  Technician: Authorized Tesla Service
+
+---
+
+## Notes
+
+Vehicle is in excellent condition. No major issues reported.
+
+Next Service Due: 2025-07-01
