@@ -1,0 +1,59 @@
+/* custom select component styles */
+
+.selectContainer {
+  position: relative;
+  width: 100%;
+}
+
+.selectTrigger,
+.selectContent {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+
+.selectTrigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 1rem;
+  font-size: 1.4rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.selectContent {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 100;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-height: 200px;
+  overflow-y: auto;
+  border-top: none;
+  border-radius: 0 0 0.4rem 0.4rem;
+}
+
+.selectItem {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.selectItemHighlighted {
+  background: #e4e4f0;
+}
+
+.selectItemDefault {
+  background: #fff;
+}
+
+.errorText {
+  width: 100%;
+  font-size: 1.2rem;
+  color: red;
+  text-align: left;
+  word-break: break-word;
+}

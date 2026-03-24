@@ -6,6 +6,8 @@ import React, {
   useEffect,
 } from "react";
 
+import styles from "./select.module.css";
+
 type SelectContextType = {
   value: string | null;
   onChange: (value: string) => void;
@@ -23,6 +25,7 @@ type SelectProps = {
   onChange: (value: string) => void;
   children: React.ReactNode;
   disabled?: boolean;
+  error?: string;
 };
 
 type ItemProps = {
@@ -42,6 +45,7 @@ export const Select = ({
   value,
   onChange,
   disabled = false,
+  error,
   children,
 }: SelectProps) => {
   const [open, setOpen] = useState(false);
@@ -49,7 +53,6 @@ export const Select = ({
   const itemsRef = useRef<string[]>([]);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // register items
   const registerItem = (value: string) => {
     if (!itemsRef.current.includes(value)) {
       itemsRef.current.push(value);
@@ -62,7 +65,6 @@ export const Select = ({
     setOpen(false);
   };
 
-  // close on outside click
   useEffect(() => {
     const handler = (e: MouseEvent) => {
       if (!containerRef.current?.contains(e.target as Node)) {
@@ -87,9 +89,10 @@ export const Select = ({
         disabled,
       }}
     >
-      <div ref={containerRef} className="select-container">
+      <div ref={containerRef} className={styles.selectContainer}>
         {children}
       </div>
+      {error && <p className={styles.errorText}>{error}</p>}
     </SelectContext.Provider>
   );
 };
@@ -103,7 +106,7 @@ export const SelectTrigger = () => {
       type="button"
       onClick={() => setOpen(!open)}
       aria-expanded={open}
-      className="select-trigger"
+      className={styles.selectTrigger}
     >
       <span className="capitalize">{value || "Select Option"}</span>
       <span className="icon material-symbols-outlined">
@@ -119,7 +122,7 @@ export const SelectContent = ({ children }: { children: React.ReactNode }) => {
   if (!open) return null;
 
   return (
-    <ul role="listbox" className="select-content">
+    <ul role="listbox" className={styles.selectContent}>
       {children}
     </ul>
   );
@@ -137,7 +140,7 @@ export const SelectItem = ({ value, children }: ItemProps) => {
       role="option"
       onMouseEnter={() => setHighlightedIndex(index)}
       onClick={() => selectItem(value)}
-      className={`select-item ${isHighlighted ? "select-item-highlighted" : "select-item-default"}`}
+      className={`${styles.selectItem} ${isHighlighted ? styles.selectItemHighlighted : styles.selectItemDefault}`}
     >
       {children}
     </li>
