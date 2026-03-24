@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { API_END_POINT, DEV_API_END_POINT } from "../../../constants";
+import { API_END_POINT } from "../../../constants";
 
 type UploadData = {
   make: string;
@@ -29,7 +29,7 @@ export const useVehicleUpload = () => {
     setError(null);
 
     try {
-      const res = await fetch(`${DEV_API_END_POINT}/upload`, {
+      const res = await fetch(`${API_END_POINT}/upload`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
