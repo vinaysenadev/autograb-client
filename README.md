@@ -44,3 +44,20 @@ The React front-end runs via Vite.
    npm run dev
    ```
 4. Open your browser and navigate to the local URL provided by Vite (e.g., `http://localhost:5173/`) to access the Autograb vehicle form.
+
+## Testing
+
+This project incorporates robust unit testing to ensure the reliability of its components and custom hooks.
+
+### Execution
+We use **Vitest** alongside the **happy-dom** environment.
+To run the test suite:
+```bash
+cd client
+npm run test
+```
+
+### What Is Tested
+- **UI Components:** The custom context-based `<Select />` component is thoroughly tested for rendering appropriately, handling click events correctly, and dealing with validation states.
+- **Form Validation & Submission:** `VechileForm.tsx` handles complex validations (e.g., required fields, proper `.txt` file constraints). Tests emulate user interaction and quick selections to guarantee correct payloads.
+- **API Hooks:** `useVehicleUpload.ts` is mocked to check loading indicators, error trapping (specifically network errors and backend rejection), and successful payload submission paths.

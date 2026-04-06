@@ -226,12 +226,14 @@ const VechileForm = () => {
           <div className="buttonWrapper">
             <button
               type="submit"
+              disabled={isLoading}
               className="fullWidthBtn"
               style={{
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
                 gap: "0.5rem",
+                backgroundColor: isLoading ? "rgba(0,0,0,0.7)" : "#000",
               }}
             >
               {isLoading ? (
